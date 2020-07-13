@@ -4,13 +4,19 @@
     <img src="./assets/logo.png">
     <!--Access shared data-->
     <h2>I am App.vue</h2>
-    <h3>String "{{$store.state.str}}" has been changed to "{{ $store.getters.reverseAndToUpper }}"</h3>
+    <h3>Counter root $store.state.counter is : {{ $store.state.counter }} </h3>
+    <h3>Counter A $store.state.a.counter is : {{ $store.state.a.counter }} </h3>
+    <hr />
+    <Index></Index>
   </div>
 </template>
 
 <script>
+import Index  from './components/Index';
+
 export default {
   name: 'App',
+  components: { Index },
 };
 </script>
 
