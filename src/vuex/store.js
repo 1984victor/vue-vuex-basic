@@ -11,11 +11,15 @@ export default new Vuex.Store({
     counter: 0,
   },
   mutations: {
-    increase (state) {
-      state.counter++;
+    increase (state) { state.counter++; },
+    decrement (state) { state.counter--; },
+  },
+  actions: {
+    increaseAction (context) {
+      setTimeout(() => { context.commit('increase'); }, 1000);
     },
-    decrement (state) {
-      state.counter--;
+    decrementAction (context) {
+      setTimeout(() => { context.commit('decrement'); }, 1000);
     },
   },
 });
