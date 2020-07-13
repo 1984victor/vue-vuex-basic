@@ -1,13 +1,21 @@
 <template>
   <div id="app">
+    <h4>view at http://locahost:8080</h4>
     <img src="./assets/logo.png">
-    <router-view/>
+    <!--Access shared data-->
+    <h2>I am App.vue</h2>
+    <h3>App.Counter is : {{$store.state.counter}}</h3>
+    <hr />
+    <Index></Index>
   </div>
 </template>
 
 <script>
+import Index from './components/Index';
+
 export default {
   name: 'App',
+  components: { Index },
 };
 </script>
 
