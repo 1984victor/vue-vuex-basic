@@ -4,19 +4,13 @@
     <img src="./assets/logo.png">
     <!--Access shared data-->
     <h2>I am App.vue</h2>
-    <h3>App.Counter is : {{$store.state.counter}}</h3>
-    <button v-on:click="$store.dispatch('decrementAction')">Click, wait for 1 second, Counter will decrement by 1</button>
-    <hr />
-    <Index></Index>
+    <h3>String "{{$store.state.str}}" has been changed to "{{ $store.getters.reverseAndToUpper }}"</h3>
   </div>
 </template>
 
 <script>
-import Index from './components/Index';
-
 export default {
   name: 'App',
-  components: { Index },
 };
 </script>
 
