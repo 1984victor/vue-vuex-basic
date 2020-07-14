@@ -10,7 +10,10 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: { counter: 1000 },
   mutations: {
-    increase (state) { state.counter++; },
+    increase (state) {
+      console.log('store-increase');
+      state.counter++;
+    },
     decrement (state) { state.counter--; },
   },
   actions: {

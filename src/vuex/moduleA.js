@@ -3,7 +3,10 @@
 const moduleA = {
   state: { counter: 100 },
   mutations: {
-    increase (state) { state.counter++; },
+    increase (state) {
+      console.log('ModuleA-increase');
+      state.counter++;
+    },
     decrement (state) { state.counter--; },
   },
   actions: {
