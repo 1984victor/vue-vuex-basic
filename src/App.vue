@@ -6,19 +6,25 @@
     <h2>I am App.vue</h2>
     <h3>Counter root $store.state.counter is : {{ $store.state.counter }} </h3>
     <h3>Counter A $store.state.a.counter is : {{ $store.state.a.counter }} </h3>
-    <h3>Get R $store.getters.doubleCounter : {{ $store.getters.doubleCounter }} </h3>
-    <h3>Get A $store.getters['a/doubleCounter'] : {{ $store.getters['a/doubleCounter'] }} </h3>
+    <h3>Use mapState access R Counter : {{ counter }} </h3>
+    <h3>Use mapState access A Counter : {{ counterA }} </h3>
     <hr />
     <Index></Index>
   </div>
 </template>
 
 <script>
+/* eslint-disable import/first */
 import Index  from './components/Index';
+import { mapState }  from 'vuex';
 
 export default {
   name: 'App',
   components: { Index },
+  computed: mapState({
+    counter (state) { return state.counter; },
+    counterA (state) { return state.a.counter; },
+  }),
 };
 </script>
 
