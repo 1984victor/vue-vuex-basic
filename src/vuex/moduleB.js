@@ -1,9 +1,10 @@
 // ./src/vuex/moduleA.js
 /* eslint-disable no-plusplus */
 const moduleA = {
+  namespaced: true,
   state: { counter: 5 },
   mutations: {
-    increaseB (state) {
+    increase (state) {
       console.log('ModuleB-increase');
       state.counter++;
     },
