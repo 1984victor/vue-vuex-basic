@@ -6,8 +6,8 @@
     <h2>I am App.vue</h2>
     <h3>Counter root $store.state.counter is : {{ $store.state.counter }} </h3>
     <h3>Counter A $store.state.a.counter is : {{ $store.state.a.counter }} </h3>
-    <h3>syncModify R Counter : <button v-on:click="$store.commit('increase')">syncModify R Counter</button></h3>
-    <h3>syncModify A Counter : <button v-on:click="$store.commit('a/increase')">syncModify A Counter</button></h3>
+    <h3>asyncModify R Counter : <button v-on:click="$store.dispatch('increaseAction')">asyncModify R Counter</button></h3>
+    <h3>asyncModify A Counter : <button v-on:click="$store.dispatch('a/increaseAction')">asyncModify A Counter</button></h3>
     <hr />
     <Index></Index>
   </div>
