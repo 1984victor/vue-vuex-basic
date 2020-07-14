@@ -1,7 +1,7 @@
 // ./src/vuex/moduleA.js
 /* eslint-disable no-plusplus */
 const moduleA = {
-  // namespaced: true,
+  namespaced: true,
   state: { counter: 5 },
   mutations: {
     increase (state) {
@@ -19,7 +19,7 @@ const moduleA = {
     },
   },
   getters: {
-    doubleCounterB (state) { return state.counter * state.counter; },
+    doubleCounter (state) { return state.counter * state.counter; },
   },
 };
 export default moduleA;

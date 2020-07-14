@@ -7,7 +7,7 @@
     <h3>Counter root $store.state.counter is : {{ $store.state.counter }} </h3>
     <h3>Counter A $store.state.a.counter is : {{ $store.state.a.counter }} </h3>
     <h3>Get R $store.getters.doubleCounter : {{ $store.getters.doubleCounter }} </h3>
-    <h3>Get A $store.getters.doubleCounterA : {{ $store.getters.doubleCounterA }} </h3>
+    <h3>Get A $store.getters['a/doubleCounter'] : {{ $store.getters['a/doubleCounter'] }} </h3>
     <hr />
     <Index></Index>
   </div>
