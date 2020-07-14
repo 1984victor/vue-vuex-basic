@@ -11,8 +11,6 @@ import { mapState }  from 'vuex';
 
 export default {
   name: 'Index',
-  computed: mapState({
-    counterB (state) { return state.b.counter; },
-  }),
+  computed: { ...mapState('b', { counterB: 'counter' }) },
 };
 </script>

@@ -1,7 +1,7 @@
 // ./src/vuex/moduleA.js
 /* eslint-disable no-plusplus */
 const moduleA = {
-  // namespaced: true,
+  namespaced: true,
   state: { counter: 100 },
   mutations: {
     increase (state) {

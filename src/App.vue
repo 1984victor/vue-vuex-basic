@@ -21,10 +21,9 @@ import { mapState }  from 'vuex';
 export default {
   name: 'App',
   components: { Index },
-  computed: mapState({
-    counter (state) { return state.counter; },
-    counterA (state) { return state.a.counter; },
-  }),
+  computed: {
+    ...mapState({ counter: 'counter' }),
+    ...mapState('a', { counterA: 'counter' }) },
 };
 </script>
 
