@@ -8,6 +8,8 @@
     <h3>Counter A $store.state.a.counter is : {{ $store.state.a.counter }} </h3>
     <h3>Use mapState access R Counter : {{ counter }} </h3>
     <h3>Use mapState access A Counter : {{ counterA }} </h3>
+    <h3>Use mapGetter access R Counter : {{ doubleCounter }} </h3>
+    <h3>Use mapGetter access A Counter : {{ doubleCounterA }} </h3>
     <hr />
     <Index></Index>
   </div>
@@ -16,14 +18,16 @@
 <script>
 /* eslint-disable import/first */
 import Index  from './components/Index';
-import { mapState }  from 'vuex';
+import { mapState, mapGetters }  from 'vuex';
 
 export default {
   name: 'App',
   components: { Index },
   computed: {
     ...mapState({ counter: 'counter' }),
-    ...mapState('a', { counterA: 'counter' }) },
+    ...mapState('a', { counterA: 'counter' }),
+    ...mapGetters({ doubleCounter: 'doubleCounter' }),
+    ...mapGetters('a', { doubleCounterA: 'doubleCounter' }) },
 };
 </script>
 
